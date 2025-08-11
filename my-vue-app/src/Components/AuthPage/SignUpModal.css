@@ -1,0 +1,378 @@
+/* Base Styles */
+.signup-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.signup-modal {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 450px;
+  max-width: 90%;
+  padding: 32px;
+  position: relative;
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #6b7280;
+  transition: all 0.2s;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.close-button:hover {
+  color: #4b5563;
+  background: #f3f4f6;
+}
+
+/* Tabs */
+.signup-tabs {
+  display: flex;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 12px 0;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.tab-button.active {
+  color: #3b82f6;
+}
+
+.tab-button.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #3b82f6;
+  border-radius: 3px 3px 0 0;
+}
+
+/* Content */
+.signup-content h2 {
+  margin: 0 0 24px;
+  font-size: 24px;
+  color: #111827;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Social Buttons */
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.social-button:hover {
+  background: #f9fafb;
+}
+
+.social-button.google {
+  color: #db4437;
+}
+
+.social-button.facebook {
+  color: #4267b2;
+}
+
+.social-icon {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 24px 0;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.divider::before {
+  margin-right: 16px;
+}
+
+.divider::after {
+  margin-left: 16px;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Input field styling */
+input {
+  width: 100%;
+  padding: 14px 15px 14px 40px; /* Left padding reduced to accommodate icon */
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.2s;
+  background-color: #f9fafb;
+  box-sizing: border-box;
+}
+
+/* Icon positioning */
+.input-icon {
+  display: none;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+/* Password field specific adjustments */
+.password-wrapper input {
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Focus states */
+input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  padding-left: 40px;
+}
+
+/* Error states */
+input.error {
+  border-color: #ef4444;
+}
+
+input.error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+.error-message {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #ef4444;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.toggle-password:hover {
+  color: #6b7280;
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-button:hover {
+  background-color: #2563eb;
+}
+
+.submit-button:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: blue;
+  animation: spin 5s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Phone Login */
+.phone-login {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.phone-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #3b82f6;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 14px;
+  margin: 0 auto;
+  transition: all 0.2s;
+  border-radius: 6px;
+}
+
+.phone-button:hover {
+  background-color: #f3f4f6;
+}
+
+/* Footer */
+.signup-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.signup-footer button {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0 5px;
+  transition: all 0.2s;
+}
+
+.signup-footer button:hover {
+  text-decoration: underline;
+}
+
+/* Success Animation */
+.success-animation {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.checkmark {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4caf50;
+  color: white;
+  font-size: 40px;
+  animation: checkmarkScale 1s ease-in-out;
+}
+
+@keyframes checkmarkScale {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.success-animation h2 {
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.success-animation p {
+  color: #666;
+  font-size: 16px;
+}
