@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 const GoToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show button after scrolling down 300px
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.scrollY > 300) {

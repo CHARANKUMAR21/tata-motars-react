@@ -137,7 +137,7 @@ const CarDetailPage = () => {
           <div className="price-range">
             {car.variants && (
               <p>
-                ₹{car.variants[0].price.split(" ")[0]} - ₹
+                {car.variants[0].price.split(" ")[0]} -
                 {car.variants[car.variants.length - 1].price.split(" ")[0]}
               </p>
             )}

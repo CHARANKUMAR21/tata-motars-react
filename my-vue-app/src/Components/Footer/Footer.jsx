@@ -21,14 +21,14 @@ const Footer = () => {
     { name: "Altroz", id: 1 },
   ];
 
-  // Social media links
   const socialLinks = {
     facebook: "https://www.facebook.com/TataMotorsGroup/",
     twitter: "https://twitter.com/TataMotors",
     instagram:
       "https://www.instagram.com/tatamotorscars?utm_source=ig_web_button_share_sheet&igsh=MjgyaWhucHczcnN5",
     youtube: "https://www.youtube.com/@TataMotorsCars",
-    whatsapp: "https://wa.me/18002098282", // Using TATA's customer care number
+    whatsapp:
+      "https://wa.me/919643006652?text=Hello!%20I%20have%20a%20question",
     contact: "https://www.tatamotors.com/contact-us/",
   };
 
@@ -52,7 +52,10 @@ const Footer = () => {
           <h4 className="heading">Help</h4>
           <p className="link">Service &rarr;</p>
           <p className="link">Dealer Locator &rarr;</p>
-          <p className="link">Digital Showroom &rarr;</p>
+          {/* <p className="link">Digital Showroom &rarr;</p> */}
+          <Link to="/digital-showroom" className="footer-link">
+            <p className="link">Digital Showroom &rarr;</p>
+          </Link>
         </div>
 
         <div className="column">

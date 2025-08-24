@@ -7,29 +7,34 @@ import TestDriveCard from "./Components/TestDriveCard/TestDriveCard";
 import Footer from "./Components/Footer/Footer";
 import GoToTop from "./Components/Gototop/GoToTop";
 import CarShowcase from "./Components/VideoCarousel/VideoCarousel";
+import TestDrive from "./Components/TestDriveCard/TestDriveCard";
+import DealersNearMe from "./Components/DealersNearMe/DealersNearMe";
+import BrandStories from "./Components/BrandStories/BrandStories";
 
 const App = () => {
   return (
     <Router>
       <div className="app">
-        <NavbarWithCarousel />
         <Routes>
           <Route
             path="/"
             element={
               <>
+                <NavbarWithCarousel />
                 <CarFeature />
                 <TestDriveCard />
               </>
             }
           />
           <Route path="/cars/:carId" element={<CarDetailPage />} />
-          {/* Add the new booking route */}
           <Route path="/booking/:carId" element={<BookingPage />} />
+          <Route path="/digital-showroom" element={<CarShowcase />} />
+          <Route path="/test-drive" element={<TestDrive />} />
+          <Route path="/brand-stories" element={<BrandStories />} />
+          <Route path="/dealers-near-me" element={<DealersNearMe />} />
         </Routes>
         <GoToTop />
         <Footer />
-        {/* <CarShowcase /> */}
       </div>
     </Router>
   );

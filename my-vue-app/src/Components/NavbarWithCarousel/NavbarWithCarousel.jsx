@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FaSearch, FaTimes, FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import Carshow from "../Carshownav/Carshow";
 import logo from "../../assets/tatalogo.png";
 import video1 from "../../assets/slide1.mp4";
@@ -19,14 +20,12 @@ import image11 from "../../assets/slide11.avif";
 import "./navbar.css";
 
 const NavbarWithCarousel = () => {
-  // Navbar states
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
   const [userInteracted, setUserInteracted] = useState(false);
 
-  // Carousel states
   const [currentIndex, setCurrentIndex] = useState(0);
   const videoRef = useRef();
   const [wasPlaying, setWasPlaying] = useState(false);
@@ -78,7 +77,6 @@ const NavbarWithCarousel = () => {
     return () => window.removeEventListener("click", handleUserInteraction);
   }, [currentIndex, userInteracted]);
 
-  // Handle scroll event
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -166,7 +164,6 @@ const NavbarWithCarousel = () => {
 
   return (
     <div className="navbar-with-carousel">
-      {/* Navbar */}
       <nav className={getNavbarClass()}>
         <div className="navbar-container">
           <div className="navbar-logo">
@@ -174,7 +171,6 @@ const NavbarWithCarousel = () => {
           </div>
 
           <div className="navbar-icons">
-            {/* Search */}
             <div className="search-quicklinks-container">
               {isSearchOpen && (
                 <div className="search-box">
@@ -201,16 +197,16 @@ const NavbarWithCarousel = () => {
                     <h3 className="quick-links-title">Quick Links</h3>
                     <ul className="quick-links-list">
                       <li>
-                        <a href="#">➔ Schedule a Test Drive</a>
+                        <Link to="/test-drive">➔ Schedule a Test Drive</Link>
                       </li>
                       <li>
-                        <a href="#">➔ Brand Stories</a>
+                        <Link to="/brand-stories">➔ Brand Stories</Link>
                       </li>
                       <li>
-                        <a href="#">➔ Digital Showroom</a>
+                        <Link to="/digital-showroom">➔ Digital Showroom</Link>
                       </li>
                       <li>
-                        <a href="#">➔ Dealers near me</a>
+                        <Link to="/dealers-near-me">➔ Dealers near me</Link>
                       </li>
                     </ul>
                   </div>
@@ -224,7 +220,6 @@ const NavbarWithCarousel = () => {
               )}
             </div>
 
-            {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="menu-toggle"
@@ -234,7 +229,6 @@ const NavbarWithCarousel = () => {
           </div>
         </div>
 
-        {/* Show Carshow inside mobile menu */}
         {isMenuOpen && (
           <div className="mobile-menu">
             <Carshow />
@@ -242,7 +236,6 @@ const NavbarWithCarousel = () => {
         )}
       </nav>
 
-      {/* Carousel */}
       <div className="carousel-container">
         <div className="carousel">
           <div
@@ -259,7 +252,6 @@ const NavbarWithCarousel = () => {
             ))}
           </div>
 
-          {/* Carousel Controls */}
           <button
             className={`carousel-control prev ${
               currentIndex === 0 ? "disabled" : ""
@@ -279,7 +271,6 @@ const NavbarWithCarousel = () => {
             &gt;
           </button>
 
-          {/* Indicators */}
           <div className="carousel-indicators">
             {carouselItems.map((_, index) => (
               <button

@@ -1,7 +1,7 @@
 export const sidebarLinks = [
   { label: "Sign In", link: "#", highlight: true },
   { label: "Digital Showroom", link: "#" },
-  { label: "Test Drive", link: "#" },
+  { label: "Test Drive", link: "/test-drive" },
   { label: "Accessories", link: "#" },
   {
     label: "Service",
@@ -36,37 +36,39 @@ export const carData = [
     id: 1,
     name: "Curvv",
     image: new URL("../../assets/Curvvnav.webp", import.meta.url).href,
-    link: "#curvv",
+    link: "/cars/2",
   },
   {
     id: 2,
     name: "Curvv.ev",
     image: new URL("../../assets/curvv-evnav.webp", import.meta.url).href,
-    link: "#curvv-ev",
+    link: "/cars/2",
   },
   {
     id: 3,
     name: "All New Altroz",
+    link: "/cars/2",
+
     image: new URL("../../assets/altroz-nav.webp", import.meta.url).href,
-    link: "#altroz",
+    link: "/cars/1",
   },
   {
     id: 4,
     name: "Tiago",
     image: new URL("../../assets/tiagonav.webp", import.meta.url).href,
-    link: "#tiago",
+    link: "/cars/3",
   },
   {
     id: 5,
     name: "Tiago.ev",
     image: new URL("../../assets/tiago-ev nav.webp", import.meta.url).href,
-    link: "#tiago-ev",
+    link: "/cars/3",
   },
   {
     id: 6,
     name: "Tigor",
     image: new URL("../../assets/tigor nav.webp", import.meta.url).href,
-    link: "#tigor",
+    link: "/cars/4",
   },
   {
     id: 7,
@@ -75,14 +77,14 @@ export const carData = [
       "../../assets/tigor-ve-xz-magnetic-red nav.webp",
       import.meta.url
     ).href,
-    link: "#tigor-ev",
+    link: "/cars/4",
   },
   {
     id: 8,
     name: "Punch",
     image: new URL("../../assets/punch-navigation nav.webp", import.meta.url)
       .href,
-    link: "#punch",
+    link: "/cars/5",
   },
   {
     id: 9,
@@ -91,32 +93,32 @@ export const carData = [
       "../../assets/punch-ev-empowered-oxide nav.webp",
       import.meta.url
     ).href,
-    link: "#punch-ev",
+    link: "/cars/5",
   },
   {
     id: 10,
     name: "Nexon",
     image: new URL("../../assets/nexon nav.webp", import.meta.url).href,
-    link: "#nexon",
+    link: "/cars/6",
   },
   {
     id: 11,
     name: "Nexon.ev",
     image: new URL("../../assets/nexon ev.webp", import.meta.url).href,
-    link: "#nexon-ev",
+    link: "#",
   },
   {
     id: 12,
     name: "Harrier",
     image: new URL("../../assets/harrier-navigation nav.webp", import.meta.url)
       .href,
-    link: "#harrier",
+    link: "/cars/7",
   },
   {
     id: 13,
     name: "Safari",
     image: new URL("../../assets/safari-navigation nav.webp", import.meta.url)
       .href,
-    link: "#safari",
+    link: "/cars/6",
   },
 ];
